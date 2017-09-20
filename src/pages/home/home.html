@@ -9,12 +9,12 @@
 <ion-content padding>
   <ion-item>
     <ion-label stacked>ราคา</ion-label>
-    <ion-input type="number"></ion-input>
+    <ion-input type="number" [(ngModel)]="price"></ion-input>
   </ion-item>
   <ion-item>
     <ion-label stacked>ส่วนลด %</ion-label>
-    <ion-input type="number"></ion-input>
+    <ion-input type="number" [(ngModel)]="discount"></ion-input>
   </ion-item>
-  <button ion-button block>แสดงราคา</button>
-  <h2>บาท</h2>
+  <button ion-button block (click)="calculate(price, discount)" >แสดงราคา</button>
+  <h2>{{ message }}</h2>
 </ion-content>
